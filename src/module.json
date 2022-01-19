@@ -1,9 +1,45 @@
 {
   "module": [
     {
+      "name": "introduction",
+      "translation": {
+        "zh-Hans": "简介"
+      }
+    },
+    {
+      "name": "infobox",
+      "translation": {
+        "zh-Hans": "信息框"
+      }
+    },
+    {
+      "name": "route",
+      "translation": {
+        "zh-Hans": "线路"
+      }
+    },
+    {
       "name": "history",
       "translation": {
         "zh-Hans": "历史"
+      }
+    },
+    {
+      "name": "reference",
+      "translation": {
+        "zh-Hans": "参考资料"
+      }
+    },
+    {
+      "name": "extend",
+      "translation": {
+        "zh-Hans": "延伸阅读"
+      }
+    },
+    {
+      "name": "catagory",
+      "translation": {
+        "zh-Hans": "分类"
       }
     }
   ]

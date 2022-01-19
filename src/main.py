@@ -9,6 +9,13 @@ global SUBWAY_ROUTE_PATH
 global SUBWAY_STOP_PATH
 global ARTICLE_PATH
 
+def get_single_page(page_name):
+    # page_name can be a route/stop's name and get all json in its folder
+    pass
+
+def build_single_page(page_name):
+    pass
+
 if __name__ == "__main__":
     MAIN_PATH = __file__
     # log print(MAIN_PATH)
@@ -24,3 +31,10 @@ if __name__ == "__main__":
     for i in module:
         module_name.append(i["name"])
     print(module_name)
+
+    # 接下来的流程大体是逐个page读取并且build
+
+    def build(template):
+        pass
+
+    # templete_brief=["introduction"+"route"]
