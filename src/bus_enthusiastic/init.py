@@ -1,28 +1,38 @@
 import os
 
-global BUS_ROUTE_PATH
-global BUS_STOP_PATH
-global SUBWAY_ROUTE_PATH
-global SUBWAY_STOP_PATH
-global ARTICLE_PATH
 
-def all_page_list(MAIN_PATH):
-    BUS_ROUTE_PATH = os.path.join(MAIN_PATH, "..", "data", "bus_route").replace(
-        "/main.py", ""
-    )
+def init_path(MAIN_PATH):
+    BUS_ROUTE_PATH = os.path.join(
+        MAIN_PATH, "..", "data", "bus_route"
+    ).replace("/main.py", "")
     BUS_STOP_PATH = os.path.join(MAIN_PATH, "..", "data", "bus_stop").replace(
         "/main.py", ""
     )
     SUBWAY_ROUTE_PATH = os.path.join(
         MAIN_PATH, "..", "data", "subway_route"
     ).replace("/main.py", "")
-    SUBWAY_STOP_PATH = os.path.join(MAIN_PATH, "..", "data", "subway_stop").replace(
-        "/main.py", ""
-    )
+    SUBWAY_STOP_PATH = os.path.join(
+        MAIN_PATH, "..", "data", "subway_stop"
+    ).replace("/main.py", "")
     ARTICLE_PATH = os.path.join(MAIN_PATH, "..", "data", "article").replace(
         "/main.py", ""
     )
+    return [
+        BUS_ROUTE_PATH,
+        BUS_STOP_PATH,
+        SUBWAY_ROUTE_PATH,
+        SUBWAY_STOP_PATH,
+        ARTICLE_PATH,
+    ]
 
+
+def all_page_list(
+    BUS_ROUTE_PATH,
+    BUS_STOP_PATH,
+    SUBWAY_ROUTE_PATH,
+    SUBWAY_STOP_PATH,
+    ARTICLE_PATH,
+):
     bus_route_list = os.listdir(BUS_ROUTE_PATH)
     bus_stop_list = os.listdir(BUS_STOP_PATH)
     subway_route_list = os.listdir(SUBWAY_ROUTE_PATH)
@@ -43,8 +53,10 @@ def all_page_list(MAIN_PATH):
     subway_stop_list = is_list_a_folder(subway_stop_list)
     article_list = is_list_a_folder(article_list)
 
-    print(bus_route_list)
-    print(bus_stop_list)
-    print(subway_route_list)
-    print(subway_stop_list)
-    print(article_list)
+    return [
+        bus_route_list,
+        bus_stop_list,
+        subway_route_list,
+        subway_stop_list,
+        article_list,
+    ]
